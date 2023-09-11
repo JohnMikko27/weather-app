@@ -8,7 +8,9 @@
 
 // Set up a simple form that will let users input their location and will fetch the weather info (still just console.log() it).
 
-// Display the information on your webpage!
+// Display the information on your webpage! 
+// create a function in api.js that returns the data, 
+// then in controller.js run the display function that takes in the returned data from api.js
 
 // Add any styling you like!
 
