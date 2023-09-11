@@ -25,14 +25,18 @@ const fetchData = async() => {
 
 const processData = async(response) => {
   const data = await response.json();
-  const dataInfo = data.current;
+  const dataCurrent = data.current;
+  const dataLocation = data.location;
   
   // object destructuring requires exact names
   // eslint-disable-next-line camelcase
-  const {feelslike_c,feelslike_f} = dataInfo; 
+  const { condition, humidity, temp_c, temp_f, wind_mph } = dataCurrent; 
+  const { country, name, region } = dataLocation;
   console.log(data);
-  console.log(dataInfo);
-  console.log(feelslike_c, feelslike_f);
+  console.log(dataCurrent);
+  console.log(dataLocation);
+  console.log(condition.text, humidity, temp_c, temp_f, wind_mph);
+  console.log(country, name, region);
 };
 /* 
  * might have to move this event listener in controller or somthing
