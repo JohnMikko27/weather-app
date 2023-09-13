@@ -8,9 +8,25 @@
   </head>
   <body>
     <div>
-
+      <div id="weatherCard">
+        <div id="weatherInformationContainer">
+          <div id="top">
+            <div id="weatherCondition"></div>
+            <div id="location"></div>
+          </div>
+          <div id="bottom">
+            <div id="fahrenheit"></div>
+            <div id="otherWeatherDetails">
+              <div id="celsius"></div>
+              <div id="windSpeed"></div>
+              <div id="humidity"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <form action="./index.js" method="post" id="searchCityForm">
-        <input type="search">
+        <input type="search" />
+        <!-- This should be an the magnifying glass image  instead of a button element -->
         <button type="submit" id="searchCityButton">Submit</button>
       </form>
     </div>

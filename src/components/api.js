@@ -25,10 +25,14 @@ const processData = async(response) => {
   return { country, name, region, weatherCondition, humidity, temp_c, temp_f, wind_mph };
 };
 
-const fetchData = async() => {
+
+// the fetchData should send an error if the city sent was empty or not a city
+
+// eslint-disable-next-line import/prefer-default-export
+export const fetchData = async () => {
   const input = document.querySelector('input');
   const apiKey = '90ba82aa379048c3b86181742232108';
-
+  
   const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${input.value}`, {mode: 'cors'});
   const processedData = await processData(response);
   console.log(processedData);
@@ -40,13 +44,4 @@ const fetchData = async() => {
  * and have the callback be a displayWeather function or something 
  * where displayWeather will get data from the fetchData or whatever functions, create the appropriate ui, and display it
  */ 
-export default function s() {
-//   const searchCityButton = document.querySelector('#searchCityButton');
-//   searchCityButton.addEventListener('click', fetchData);
-  const searchCityForm = document.querySelector('#searchCityForm');
-  searchCityForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    fetchData();
-    searchCityForm.reset();
-  });
-}
+
