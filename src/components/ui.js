@@ -1,4 +1,4 @@
-export default function displayData(data) {
+export default function displayWeatherData(data) {
 //   const weatherInformationContainer = document.querySelector('#weatherInformationContainer');
   console.log(data);
   //   weatherInformationContainer.textContent = `${data.country}, ${data.name}, ${data.region}, ${data.weatherCondition}, 

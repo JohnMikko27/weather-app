@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@100;400&display=swap");
+
+body,
+html {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  width: 100vw;
+  height: 100vh;
+}
+
+#header {
+}
+
+#weatherInformationContainer {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 1.5rem;
+  width: 100vw;
+  top: 30%;
+}
+
+/*
+ * use comments to organize styles and say what the styles do
+ */
+
+#top {
+  padding: 0.5rem;
+}
+
+#location {
+  font-size: 2.5rem;
+}
+
+#bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: yellow;
+  padding: 0.5rem;
+}
+
+#fahrenheit {
+  position: relative;
+  font-size: 4rem;
+}
+
+#fahrenheit::after {
+  content: "\00B0 F";
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10%;
+}

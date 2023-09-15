@@ -1,5 +1,5 @@
 import { fetchData } from './api';
-import displayData from './ui';
+import displayWeatherData from './ui';
 
 export default function handler() {
   //   const searchCityButton = document.querySelector('#searchCityButton');
@@ -9,7 +9,7 @@ export default function handler() {
     e.preventDefault();
     const data = await fetchData();
     console.log(data);
-    displayData(data);
+    displayWeatherData(data);
     searchCityForm.reset();
   });
 }

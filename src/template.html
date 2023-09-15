@@ -7,28 +7,33 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <div>
-      <div id="weatherCard">
-        <div id="weatherInformationContainer">
-          <div id="top">
-            <div id="weatherCondition"></div>
-            <div id="location"></div>
-          </div>
-          <div id="bottom">
-            <div id="fahrenheit"></div>
-            <div id="otherWeatherDetails">
-              <div id="celsius"></div>
-              <div id="windSpeed"></div>
-              <div id="humidity"></div>
-            </div>
-          </div>
+    <div id="header">
+      <div id="title">
+        <p>Weather App</p>
+        <p>By Mikko</p>
+      </div>
+      <div>
+        <form action="./index.js" method="post" id="searchCityForm">
+          <input type="search" />
+          <!-- This should be an the magnifying glass image  instead of a button element -->
+          <button type="submit" id="searchCityButton">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="weatherInformationContainer">
+      <div id="top">
+        <div id="weatherCondition"></div>
+        <h1 id="location"></h1>
+      </div>
+      <div id="bottom">
+        <div id="fahrenheit"></div>
+        <div id="otherWeatherDetails">
+          <div id="celsius"></div>
+          <div id="windSpeed"></div>
+          <div id="humidity"></div>
         </div>
       </div>
-      <form action="./index.js" method="post" id="searchCityForm">
-        <input type="search" />
-        <!-- This should be an the magnifying glass image  instead of a button element -->
-        <button type="submit" id="searchCityButton">Submit</button>
-      </form>
     </div>
   </body>
 </html>
