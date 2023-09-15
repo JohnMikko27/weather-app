@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@100;400&display=swap");
 
+:root {
+  --font-color: white;
+  --bg-color: black;
+  --hover-color: rgb(164, 209, 255);
+}
+
 body,
 html {
   position: relative;
@@ -11,36 +17,87 @@ html {
   height: 100vh;
 }
 
+/* 
+ * header
+ */
+
 #header {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  width: 100vw;
+  padding: 1.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+#title {
+  font-size: 2.5rem;
+}
+
+/* 
+ * form
+ */
+
+#searchCityForm {
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
+  align-items: center;
+}
+
+input {
+  height: 2rem;
+  width: 10rem;
+}
+
+#searchCityButton {
+  background-image: url("./assets/search_FILL0_wght400_GRAD0_opsz24.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border: white;
+}
+
+#searchCityButton:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
 }
 
 #weatherInformationContainer {
   position: absolute;
   display: grid;
   grid-template-columns: 1fr;
-  border: 2px solid black;
-  border-radius: 4px;
   padding: 1.5rem;
   width: 100vw;
   top: 30%;
 }
 
-/*
- * use comments to organize styles and say what the styles do
+/* 
+ * top
  */
 
 #top {
   padding: 0.5rem;
 }
 
+#weatherCondition {
+  font-size: 2rem;
+}
+
 #location {
+  padding: 0;
+  margin: 0;
   font-size: 2.5rem;
 }
 
+/* 
+ * bottom
+ */
+
 #bottom {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: yellow;
+  grid-template-columns: 0.6fr 3fr;
   padding: 0.5rem;
 }
 
@@ -51,7 +108,22 @@ html {
 
 #fahrenheit::after {
   content: "\00B0 F";
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   position: absolute;
-  top: 10%;
+  top: -3%;
+}
+
+#otherWeatherDetails {
+  font-size: 1.25rem;
+}
+
+#celsius {
+  position: relative;
+}
+
+#celsius::after {
+  content: "\00B0 C";
+  font-size: 0.75rem;
+  position: absolute;
+  top: -3%;
 }
