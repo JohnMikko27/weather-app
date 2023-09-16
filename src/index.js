@@ -18,5 +18,7 @@
 // information comes back from the API. Use DevTools to test for low-end devices. Push that baby to github and share your solution below!
 
 import handler from './components/controller';
+import { onLoad } from './components/localStorage';
 
+window.addEventListener('load', onLoad);
 handler();

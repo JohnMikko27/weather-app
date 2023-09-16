@@ -27,14 +27,13 @@ const processData = async(response) => {
 
 
 // the fetchData should send an error if the city sent was empty or not a city
+// this function should have a parameter instead of selecting input
 
 // eslint-disable-next-line import/prefer-default-export, consistent-return
-export async function fetchData() {
+export async function fetchData(city) {
   try {
-    const input = document.querySelector('input');
     const apiKey = '90ba82aa379048c3b86181742232108';
-    
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${input.value}`, {mode: 'cors'});
+    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`, {mode: 'cors'});
     const processedData = await processData(response);
     console.log(processedData);
     return processedData;

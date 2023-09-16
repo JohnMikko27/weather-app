@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@100;400&display=swap");
 
 :root {
-  --font-color: white;
-  --bg-color: black;
   --hover-color: rgb(164, 209, 255);
 }
 
@@ -33,15 +31,11 @@ body {
 
 #header {
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
+  grid-template-columns: 0.93fr;
   width: 100vw;
   padding: 1.5rem;
-  justify-items: center;
+  justify-items: end;
   align-items: center;
-}
-
-#title {
-  font-size: 2.5rem;
 }
 
 /* 
@@ -95,6 +89,7 @@ input {
   padding: 1.5rem;
   width: 100vw;
   top: 30%;
+  left: 5%;
 }
 
 /* 
