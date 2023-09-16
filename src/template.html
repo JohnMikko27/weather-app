@@ -11,9 +11,9 @@
       <div id="title">Weather App by Mikko</div>
       <div>
         <form action="./index.js" method="post" id="searchCityForm">
-          <input type="search" />
-          <!-- This should be an the magnifying glass image  instead of a button element -->
+          <input type="search" placeholder="Search City" minlength="2" />
           <button type="submit" id="searchCityButton"></button>
+          <span id="error" class="hidden">Location not found!</span>
         </form>
       </div>
     </div>

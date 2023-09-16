@@ -6,7 +6,7 @@
  * make sure to utilize functions and api.js and ui.js should not have any functions within one another, it should only be within controller.js
  */
 
-
+// set an onload function that fetches the previously requested city after each reload into the webpage
 
 
 
@@ -28,15 +28,21 @@ const processData = async(response) => {
 
 // the fetchData should send an error if the city sent was empty or not a city
 
-// eslint-disable-next-line import/prefer-default-export
-export const fetchData = async () => {
-  const input = document.querySelector('input');
-  const apiKey = '90ba82aa379048c3b86181742232108';
-  
-  const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${input.value}`, {mode: 'cors'});
-  const processedData = await processData(response);
-  console.log(processedData);
-  return processedData;
+// eslint-disable-next-line import/prefer-default-export, consistent-return
+export async function fetchData() {
+  try {
+    const input = document.querySelector('input');
+    const apiKey = '90ba82aa379048c3b86181742232108';
+    
+    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${input.value}`, {mode: 'cors'});
+    const processedData = await processData(response);
+    console.log(processedData);
+    return processedData;
+  } catch(error) {
+    // console.log(error);
+    return error;
+  }
+
 };
 
 /* 
