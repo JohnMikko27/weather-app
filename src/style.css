@@ -55,6 +55,7 @@ body {
 }
 
 input {
+  position: relative;
   height: 2.2rem;
   width: 10rem;
   border-radius: 4px;
@@ -69,11 +70,18 @@ input {
   background-color: white;
   border: white;
   border-radius: 4px;
+  margin-left: -1.5rem;
 }
 
 #searchCityButton:hover {
   cursor: pointer;
   background-color: var(--hover-color);
+}
+
+#error {
+  margin-top: 0.3rem;
+  margin-left: 0.7rem;
+  color: red;
 }
 
 .hidden {

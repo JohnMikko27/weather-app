@@ -15,10 +15,9 @@ export default function handler() {
       console.log('error!!!sdfsfds');
       error.classList.toggle('hidden');
     } else {
-      error.classList.toggle('error');
+      error.classList.toggle('hidden');
       displayWeatherData(data);
     }
-    
     searchCityForm.reset();
   });
 }
