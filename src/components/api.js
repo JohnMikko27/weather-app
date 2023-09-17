@@ -24,6 +24,5 @@ export async function fetchData(city) {
   } catch(error) {
     return error;
   }
-
 };
 
