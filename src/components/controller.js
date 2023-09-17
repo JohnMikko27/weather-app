@@ -3,8 +3,6 @@ import displayWeatherData from './ui';
 import setLocation from './localStorage';
 
 export default function handler() {
-  //   const searchCityButton = document.querySelector('#searchCityButton');
-  //   searchCityButton.addEventListener('click', fetchData);
   const searchCityForm = document.querySelector('#searchCityForm');
   const input = document.querySelector('input');
   const error = document.querySelector('#error');
@@ -14,7 +12,6 @@ export default function handler() {
     console.log(data);
     
     if (data instanceof Error) {
-      console.log('error!!!sdfsfds');
       error.classList.remove('hidden');
     } else {
       error.classList.add('hidden');

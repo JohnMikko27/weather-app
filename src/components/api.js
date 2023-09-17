@@ -1,15 +1,3 @@
-/* 
- * when the client searches something up in the search bar and enters, (controller.js)
- * then get that data (city) get that city's weather data from the api (api.js)
- * then display the information from that request onto the page (ui..js)
- * remember to look at programming notes and apply them, especially OOP principles/DRY/SOLID principles
- * make sure to utilize functions and api.js and ui.js should not have any functions within one another, it should only be within controller.js
- */
-
-// set an onload function that fetches the previously requested city after each reload into the webpage
-
-
-
 const processData = async(response) => {
   const data = await response.json();
   const dataCurrent = data.current;
@@ -25,10 +13,6 @@ const processData = async(response) => {
   return { country, name, region, weatherCondition, humidity, temp_c, temp_f, wind_mph };
 };
 
-
-// the fetchData should send an error if the city sent was empty or not a city
-// this function should have a parameter instead of selecting input
-
 // eslint-disable-next-line import/prefer-default-export, consistent-return
 export async function fetchData(city) {
   try {
@@ -43,10 +27,4 @@ export async function fetchData(city) {
   }
 
 };
-
-/* 
- * might have to move this event listener in controller or somthing
- * and have the callback be a displayWeather function or something 
- * where displayWeather will get data from the fetchData or whatever functions, create the appropriate ui, and display it
- */ 
 
