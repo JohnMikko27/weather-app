@@ -17,7 +17,7 @@ const processData = async(response) => {
 export async function fetchData(city) {
   try {
     const apiKey = '90ba82aa379048c3b86181742232108';
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`, {mode: 'cors'});
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`, {mode: 'cors'});
     const processedData = await processData(response);
     console.log(processedData);
     return processedData;
