@@ -22,6 +22,7 @@ export async function fetchData(city) {
     console.log(processedData);
     return processedData;
   } catch(error) {
+    console.log(error);
     return error;
   }
 };
