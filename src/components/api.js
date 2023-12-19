@@ -2,7 +2,13 @@ const processData = async(response) => {
   const data = await response.json();
   const dataCurrent = data.current;
   const dataLocation = data.location;
-    
+
+
+
+  // I ACCIDENTALLY COMMIT AMENDED A PUSHED COMMIT SO I HAVE TO FIX THAT FIRST!
+
+
+
   // object destructuring requires exact names
   // eslint-disable-next-line camelcase
   const { condition, humidity, temp_c, temp_f, wind_mph } = dataCurrent; 

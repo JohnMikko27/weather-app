@@ -19,6 +19,7 @@
 
 import handler from './components/controller';
 import { onLoad } from './components/localStorage';
+import './style.css';
 
 window.addEventListener('load', onLoad);
 handler();
